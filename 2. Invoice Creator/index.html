@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <!-- Links -->
+
+    <link rel="stylesheet" href="./index.css" />
+
+    <!-- Scripts -->
+    <script src="./index.js" defer></script>
+
+    <title>Masharty | Invoice Creator</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <header>
+          <h1>Invoice creator</h1>
+
+          <p>Thanks for choosing GoodCorp, LLC!</p>
+        </header>
+
+        <div class="services">
+          <button class="service-button" id="wash-car-btn">
+            Wash Car: $10
+          </button>
+
+          <button class="service-button" id="mow-lawn-btn">
+            Mow Lawn: $20
+          </button>
+
+          <button class="service-button" id="pull-weeds-btn">
+            Pull Weeds: $30
+          </button>
+        </div>
+
+        <div class="invoiced-list">
+          <div class="task-total space-apart">
+            <p class="task">TASK</p>
+            <p class="total">TOTAL</p>
+          </div>
+          
+          <!-- Cart items -->
+          <div id="invoice-items">
+
+          </div>
+          <!-- ---------------- -->
+          
+          <div class="horizontal-line"></div>
+
+          <div class="notes-amount space-apart">
+            <p class="notes">NOTES</p>
+            <p class="amount">TOTAL AMOUNT</p>
+          </div>
+          <div class="calc-note-amount">
+            <p class="note-details">We accept cash, credit card, or PayPal</p>
+            <p id="calculated-amount">$0</p>
+          </div>
+
+          <button class="send-btn">
+            <img src="./images/mail.svg" /> Send invoice
+          </button>
+        </div>
+
+      </div>
+    </main>
+  </body>
+</html>
