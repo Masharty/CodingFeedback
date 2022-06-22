@@ -113,10 +113,6 @@ resetBtn.addEventListener("click", function () {
  *       REMOVE CART ITEMS       *
 \*********************************/
 
-let removeWash = document.getElementById("wash-car");
-let removeWeeds = document.getElementById("pull-weeds");
-let removeLawn = document.getElementById("mow-lawn");
-
 document.addEventListener("click", function (e) {
   if (e.target && e.target.id == "wash-car") {
     for (let request in servicesRequested) {
@@ -125,39 +121,22 @@ document.addEventListener("click", function (e) {
           (service) => service !== "Wash Car"
         );
       }
-    }
-
-    addToCart();
-  }
-  
-});
-
-document.addEventListener("click", function (e) {
-  if (e.target && e.target.id == "mow-lawn") {
+    } addToCart();
+  } else if (e.target && e.target.id == "mow-lawn") {
     for (let request in servicesRequested) {
       if (servicesRequested[request] == "Mow Lawn") {
         servicesRequested = servicesRequested.filter(
           (service) => service !== "Mow Lawn"
         );
       }
-    }
-
-    addToCart();
-  }
-
-});
-
-document.addEventListener("click", function (e) {
-  if (e.target && e.target.id == "pull-weeds") {
+    } addToCart();
+   } else if (e.target && e.target.id == "pull-weeds") {
     for (let request in servicesRequested) {
       if (servicesRequested[request] == "Pull Weeds") {
         servicesRequested = servicesRequested.filter(
           (service) => service !== "Pull Weeds"
         );
       }
-    }
-
-    addToCart();
+    } addToCart();
   }
-});
-
+})
