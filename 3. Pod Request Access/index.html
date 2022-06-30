@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Links -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./index.css" />
+
+    <!-- Scripts -->
+    <script src="./index.js" defer></script>
+
+    <title>Masharty | Pod request access landing page</title>
+  </head>
+  <body>
+    <main>
+      <div class="main-content center">
+        <img class="logo" src="./assets/logo.svg" alt="website logo"/>
+
+        <div class="content">
+          <h1>Publish your podcasts <span aria-hidden="true">everywhere.</span></h1>
+
+          <p>
+            Upload your audio to Pod with a single click. We’ll then distribute
+            your podcast to Spotify, Apple Podcasts, Google Podcasts, Pocket
+            Casts and more!
+          </p>
+
+          <form class="email-section" onsubmit="return validate()" novalidate aria-label="access request form">
+          <input
+              id="email"
+              type="email"
+              name="email"
+              placeholder="Email address"
+              required
+            />
+            <p id="error-msg" aria-hidden="true"></p>
+
+            <button type="submit" id="submit-button">Request Access</button>
+          </form>
+
+
+          <div class="brands">
+            <img alt="spotify logo" src="./assets/spotify.svg" />
+            <img alt="apple podcast logo" src="./assets/apple-podcast.svg" />
+            <img alt="google podcast logo" src="./assets/google-podcasts.svg" />
+            <img alt="pocket casts logo" src="./assets/pocket-casts.svg" />
+          </div>
+        </div>
+        <img class="dots" src="./assets/bg-pattern-dots.svg" aria-hidden="true">
+      </div>
+    </main>
+  </body>
+</html>

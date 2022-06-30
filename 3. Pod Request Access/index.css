@@ -1,0 +1,276 @@
+@import url("https://fonts.googleapis.com/css2?family=Chivo:wght@300;400;700&display=swap");
+
+/* STANDARD STYLES */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  background-color: #121725;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+/* GENERAL STYLES */
+
+body {
+  font-family: "Chivo";
+  font-style: normal;
+  font-weight: 400;
+  overflow-x: hidden;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 2.4rem;
+  text-align: center;
+}
+
+.logo {
+  padding-top: 6.2rem;
+}
+
+.dots {
+  display: none;
+}
+
+/* TYPOGRAPHY */
+
+h1,
+span {
+  font-size: 2.6rem;
+  line-height: 3.8rem;
+  text-transform: uppercase;
+  color: #54e6af;
+  font-weight: 300;
+}
+
+h1 {
+  padding: 5.7rem 0 1.6rem 0;
+}
+span {
+  color: #ffffff;
+}
+
+p {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  font-weight: 300;
+  color: #c2cbe5;
+}
+
+input,
+button {
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 2.8rem;
+  color: #969aa5;
+}
+
+button {
+  color: #121725;
+}
+
+#error-msg {
+  color: #fb3e3e;
+  font-weight: 600;
+  text-align: left;
+  margin: 0rem 0 0.7rem 3.2rem;
+  position: absolute;
+}
+
+/* LAYOUT */
+main {
+  background: url("./assets/image-host.jpg") no-repeat;
+  background-size: cover;
+  height: 100vh;
+  background-position: 50%;
+}
+
+.main-content {
+  background-color: rgba(18, 23, 37, 0.9);
+  height: 100vh;
+  width: 100vw;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  max-width: 48rem;
+}
+
+/* content ordering */
+
+h1 {
+  order: 1;
+}
+p {
+  order: 2;
+}
+.brands {
+  order: 3;
+}
+.email-section {
+  order: 4;
+}
+
+.brands {
+  margin: 3.3rem 0rem 4.8rem 0rem;
+}
+
+.brands img {
+  margin: 0 1.5rem 1rem 0rem;
+  height: 1.7rem;
+}
+
+/* BUTTONS AND INPUT */
+
+input {
+  display: inline-block;
+  width: 100%;
+  padding: 0.9rem 0 0.9rem 3.2rem;
+  background: #2c344b;
+  border-radius: 2.8rem;
+  border: none;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+button {
+  background: #54e6af;
+  box-shadow: 0px 25px 20px -20px rgba(84, 230, 175, 0.497913);
+  border-radius: 2.8rem;
+  font-size: 1.4rem;
+  color: #121725;
+  border: none;
+  padding: 0.9rem 0;
+  margin-top: 3rem;
+  width: 100%;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #b3ffe2;
+}
+
+/* MEDIA QUERIES  */
+
+/* Tablet View */
+@media (min-width: 630px) {
+  
+  .main-content {
+    background-color: rgba(18, 23, 37, 0);
+    display: flex;
+    flex-direction: column;
+    padding: 0 2.4rem;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  h1,
+  span {
+    font-size: 48px;
+    line-height: 56px;
+  }
+
+  main {
+    background: url(./assets/image-host-tablet.jpg) no-repeat;
+
+    background-position: top right;
+  }
+
+  .logo {
+    padding-left: 3.5rem;
+  }
+
+  .content {
+    background-color: #121725;
+    margin: 18rem 0 0 3.9rem;
+    max-width: 63.5rem;
+  }
+
+  .content p {
+    max-width: 44.5rem;
+  }
+  .brands {
+    order: 4;
+  }
+
+  .email-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 4rem 0 2rem 0;
+  }
+
+  input {
+    padding: 1.4rem 0 1.4rem 3.2rem;
+    margin-bottom: 0rem;
+    min-width: 75%;
+  }
+
+  button {
+    min-width: 30%;
+    white-space: nowrap;
+    position: relative;
+    right: 31%;
+    margin-top: 0rem;
+  }
+
+  .brands {
+    margin: 3.3rem 0rem 4.8rem 0rem;
+    min-width: 53.5rem;
+  }
+
+  .brands img {
+    margin: 0 1.5rem 2rem 0rem;
+    height: fit-content;
+  }
+
+  #error-msg {
+    margin-top: 9rem;
+  }
+
+  .dots {
+    display: inline-block;
+    margin-top: 15rem;
+    margin-left: 4rem;
+  }
+}
+
+/* Desktop View */
+@media (min-width: 1024px) {
+  main {
+    background: url(./assets/image-host.jpg) no-repeat;
+
+    background-position: top right;
+  }
+
+  .content {
+    margin: 10rem 0 0 3.9rem;
+    max-width: 63.5rem;
+  }
+
+  .dots {
+    display: inline-block;
+
+    margin-top: 0rem;
+    margin-left: 0rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-bottom: 21rem;
+  }
+}
