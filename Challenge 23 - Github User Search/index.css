@@ -32,10 +32,6 @@ body {
   align-items: center;
 }
 
-.container {
-  /* min-width: 700px; */
-}
-
 .title {
   font-weight: 700;
   font-size: 26px;
@@ -85,9 +81,7 @@ label {
   width: 100%;
 }
 
-
 form {
-
   position: relative;
 }
 input {
@@ -142,12 +136,10 @@ input:focus::placeholder {
 }
 
 #no-results {
-  display:none;
+  display: none;
   position: absolute;
   right: 20px;
   color: #f74646;
-
-
 }
 
 /* DETAILS CONTAINER */
@@ -296,9 +288,7 @@ input:focus::placeholder {
   color: #4b6a9b;
 }
 
-
 @media (max-width: 750px) {
-
   #github-icon {
     width: 70px;
   }
@@ -311,12 +301,9 @@ input:focus::placeholder {
   #registration-details {
     display: flex;
     flex-direction: column;
-
-  
   }
 
   #join-date {
     text-align: left;
   }
 }
-
