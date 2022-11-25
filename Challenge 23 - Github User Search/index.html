@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./index.css" />
+
+    <script src="./index.js" defer></script>
+
+    <title>Masharty | GitHub user search app</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="top-container flex-container">
+        <div class="title">devfinder</div>
+
+        <div id="mode-btns">
+          <a id="light" class="toggle"
+            >Light <img src="./assets/icon-sun.svg"
+          /></a>
+          <a id="dark" class="toggle"
+            >Dark <img src="./assets/icon-moon.svg"
+          /></a>
+        </div>
+      </div>
+
+      <div class="search-container">
+        <form class="flex-container" id="search-form"> 
+          <img class="search-icon" src="./assets/icon-search.svg" />
+          <label for="search">
+            <input
+              type="search"
+              placeholder="Search GitHub username..."
+              name="search"
+              id="search"
+                   />
+
+            <p id="no-results">No results</p>
+          </label>
+
+          <button id="search-btn" type="submit">Search</button>
+        </form>
+      </div>
+      <div id="details-container">
+        <div id="github-avatar">
+          <img
+            id="github-icon"
+            src="./assets/github-logo.svg"
+          />
+        </div>
+
+        <div id="user-details">
+          <div id="registration-details">
+            <div id="credentials">
+              <p id="name">Full Name</p>
+              <p id="username">username</p>
+            </div>
+
+            <p id="join-date">Join Date</p>
+          </div>
+
+          <div id="bio">
+            Bio
+          </div>
+
+          <div id="stats">
+            <div class="stat-item">
+              <h3 class="stat-title">Repos</h3>
+              <p id="repos" class="stat-number">0</p>
+            </div>
+
+            <div class="stat-item">
+              <h3 class="stat-title">Followers</h3>
+              <p id="followers" class="stat-number">0</p>
+            </div>
+
+            <div class="stat-item">
+              <h3 class="stat-title">Following</h3>
+              <p id="following" class="stat-number">0</p>
+            </div>
+          </div>
+
+          <div id="contact">
+            <div class="contact-item">
+              <img class="contact-icon" src="./assets/icon-location.svg" />
+              <p id="location" class="contact-result">Location</p>
+            </div>
+
+            <div class="contact-item">
+              <img class="contact-icon" src="./assets/icon-twitter.svg" />
+              <p id="twitter" class="contact-result">Twitter</p>
+            </div>
+
+            <div class="contact-item">
+              <img class="contact-icon" src="./assets/icon-website.svg" />
+              <p id="website" class="contact-result">link</p>
+            </div>
+
+            <div class="contact-item">
+              <img class="contact-icon" src="./assets/icon-company.svg" />
+              <p id="company" class="contact-result">Organisation</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

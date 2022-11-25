@@ -1,0 +1,322 @@
+/* STANDARD STYLES */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* TYPOGRAPHY */
+
+html {
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 400;
+  color: #ffffff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+body {
+  background: #141d2f;
+  padding: 10%;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.container {
+  /* min-width: 700px; */
+}
+
+.title {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 39px;
+}
+
+.toggle {
+  align-items: center;
+  display: flex;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 19px;
+  letter-spacing: 2.5px;
+}
+
+#mode-btns:hover {
+  cursor: pointer;
+  color: #90a4d4;
+}
+
+.toggle img {
+  margin-left: 16px;
+}
+
+#dark {
+  display: none;
+}
+
+.top-container {
+  justify-content: space-between;
+}
+
+/* SEARCH CONTAINER */
+.search-container {
+  width: 100%;
+  background: #1e2a47;
+  border-radius: 15px;
+  padding: 9.5px 10px 9.5px 32px;
+  margin: 36px 0 24px 0;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+}
+
+
+form {
+
+  position: relative;
+}
+input {
+  width: 100%;
+  position: relative;
+
+  border: none;
+  background-color: unset;
+  font-size: 18px;
+  line-height: 25px;
+  color: #ffffff;
+  margin-left: 23px;
+}
+
+input::placeholder {
+  font-size: 18px;
+  line-height: 25px;
+  color: #ffffff;
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 400;
+}
+
+input:hover {
+  cursor: text;
+}
+
+input:focus {
+  outline: none;
+  background-color: unset;
+}
+
+input:focus::placeholder {
+  color: transparent;
+}
+
+#search-btn {
+  margin-left: auto;
+  background: #0079ff;
+  border-radius: 10px;
+  border: none;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+  padding: 1.8% 3.5%;
+}
+
+#search-btn:hover {
+  background: #60abff;
+  cursor: pointer;
+}
+
+#no-results {
+  display:none;
+  position: absolute;
+  right: 20px;
+  color: #f74646;
+
+
+}
+
+/* DETAILS CONTAINER */
+
+/* Registration Details Section */
+#details-container {
+  display: flex;
+  padding: 48px;
+  background: #1e2a47;
+  border-radius: 15px;
+}
+
+#github-icon {
+  margin-right: 37px;
+  border-radius: 50%;
+  width: 180px;
+}
+
+#registration-details {
+  display: flex;
+  justify-content: space-between;
+}
+
+#name {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 39px;
+}
+
+#username {
+  color: #0079ff;
+}
+
+#username:hover {
+  cursor: pointer;
+}
+
+#join-date {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+  margin-top: 5px;
+  text-align: right;
+}
+
+#bio {
+  margin: 20px 0 32px 0;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+}
+
+/* Statistic Section */
+
+#stats {
+  display: flex;
+  justify-content: space-around;
+  background: #141d2f;
+  border-radius: 10px;
+  padding: 15px 53px 17px 12px;
+  margin-bottom: 37px;
+}
+
+.stat-title {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 19px;
+}
+
+.stat-number {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 33px;
+}
+
+/* Contact Section */
+
+#contact {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  grid-row: auto auto;
+  gap: 20px;
+  grid-column-gap: 70px;
+}
+
+.contact-result:hover {
+  display: inline;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.contact-item:hover {
+  cursor: pointer;
+}
+
+/* DARK MODE */
+
+.dark-mode {
+  background: #f6f8ff;
+  color: #222731;
+}
+
+.dark-mode #dark {
+  display: flex;
+}
+
+.dark-mode #mode-btns {
+  color: #4b6a9b;
+}
+
+.dark-mode #light {
+  display: none;
+}
+
+.dark-mode #mode-btns:hover,
+.dark-mode input {
+  color: #222731;
+}
+
+.dark-mode input:focus::placeholder {
+  color: transparent;
+}
+
+.dark-mode input::placeholder {
+  color: #4b6a9b;
+}
+
+.dark-mode .search-container,
+.dark-mode #details-container {
+  background: #fefefe;
+  box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+}
+
+.dark-mode #stats {
+  background: #f6f8ff;
+}
+
+.dark-mode #join-date,
+.dark-mode #contact,
+.dark-mode .stat-title,
+.dark-mode #bio {
+  color: #4b6a9b;
+}
+
+
+@media (max-width: 750px) {
+
+  #github-icon {
+    width: 70px;
+  }
+
+  #contact {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #registration-details {
+    display: flex;
+    flex-direction: column;
+
+  
+  }
+
+  #join-date {
+    text-align: left;
+  }
+}
+
